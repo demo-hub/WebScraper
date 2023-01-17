@@ -1,6 +1,5 @@
 import os
 
-from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from selenium import webdriver
 

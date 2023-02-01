@@ -49,3 +49,31 @@ password_field.send_keys(password)
 login_button = driver.find_element(
     'css selector', '.submit-login')
 login_button.click()
+
+# Read grocery list from text file
+with open('grocery_list.txt', 'r') as f:
+    grocery_list = f.read().splitlines()
+
+# Search for each item in the list
+for item in grocery_list:
+    try:
+        # Search for the item
+        search = driver.find_element('id', 'input-custom-label-search')
+        search.send_keys(item)
+
+        # Click search button
+        search_button = driver.find_element('class name', 'search-button')
+        search_button.click()
+
+        # Click add to cart button
+        add_to_cart = driver.find_element('class name', 'add-to-cart')
+        add_to_cart.click()
+
+        # Click close button
+        close = driver.find_element('class name', 'close')
+        close.click()
+
+        # Clear search field
+        search.clear()
+    except:
+        continue

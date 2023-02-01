@@ -16,4 +16,14 @@ This is a project that aims to automate the grocery shopping process. It is a wo
 1. Clone the repository
 2. Install Selenium by running `pip install selenium` in the command line
 3. Create a file called `.env` in the root directory of the project with your Continente credentials
-4. Run `python main.py` in the command line
+   - `CONTINENTE_USERNAME=your_username`
+   - `CONTINENTE_PASSWORD=your_password`
+4. Create a file called `groceries.txt` in the root directory of the project with the items you want to buy
+   - Each item should be on a new line
+   - Example:
+     ```
+     banana
+     apples
+     orange
+     ```
+5. Run `python main.py` in the command line
